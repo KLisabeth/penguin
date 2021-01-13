@@ -13,7 +13,8 @@
 
   .penguin {
     position: relative;
-    margin: 1% 70% 0 0;
+    left :50% ;
+   
     display: block;
     width: var(--penguin-size, 300px);
     height: var(--penguin-size, 300px);
@@ -255,3 +256,4 @@
     top: 280px;
     border-bottom: 8px dashed rgb(3, 3, 100);
   } */
+ 
