@@ -233,9 +233,9 @@
     transition: transform 5s ease-in-out;
   }
   .penguin  {
-    animation: left-to-right 5s ease-out forwards infinite alternate;
+    animation: jump 5s ease-out forwards infinite alternate;
   }
-  @keyframes left-to-right {
+  @keyframes jump {
     0%{
       transform: translateX(0); 
     }
