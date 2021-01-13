@@ -13,8 +13,7 @@
 
   .penguin {
     position: relative;
-    left :50% ;
-   
+    left: 30% ;
     display: block;
     width: var(--penguin-size, 300px);
     height: var(--penguin-size, 300px);
