@@ -1,5 +1,5 @@
 :root {
-    --penguin-size: 300px;
+    --penguin-size: 500px;
     --penguin-skin: gray;
     --penguin-belly: white;
     --penguin-beak: orange;
@@ -8,7 +8,6 @@
   @media (max-width: 350px) {
     :root {
       --penguin-size: 200px;
-      --penguin-skin: black;
     }
   }
 
@@ -19,6 +18,7 @@
     margin-top: 5%;
     width: var(--penguin-size, 300px);
     height: var(--penguin-size, 300px);
+    
   }
 
   .right-cheek {
@@ -75,7 +75,7 @@
     border-radius: 30% 30% 120% 30%;
     transform: rotate(130deg);
     z-index: -1;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-name: wave;
     animation-iteration-count: infinite;
     transform-origin:0% 0%;
@@ -98,16 +98,34 @@
     }
 
   .left-hand {
-    top: 0%;
-    left: 75%;
-    background: var(--penguin-skin, gray);
-    width: 30%;
-    height: 60%;
-    border-radius: 30% 30% 30% 120%;
-    transform: rotate(-45deg);
+    top: 5%;
+    left: 65%;
+    background: var(--penguin-skin, black);
+    width: 60%;
+    height: 40%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(320deg);
     z-index: -1;
+    animation-duration: 5s;
+    animation-name: show;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
   }
-
+  @keyframes show {
+    40% {
+      transform: rotate(320deg);
+    }
+    30% {
+      transform: rotate(340deg);
+    }
+    20% {
+      transform: rotate(320deg);
+    }
+    10% {
+      transform: rotate(340deg);
+    }
+  }
   .right-feet {
     top: 85%;
     left: 60%;
@@ -194,9 +212,14 @@
   }
 
   body {
-    background:#c6faf1;
+    background:#cae7e2;
   }
 
   .penguin * {
     position: absolute;
+  }
+  .road {
+    position: relative;
+    top: 450px;
+    border-bottom: 8px dashed rgb(3, 3, 100);
   }
