@@ -1,5 +1,5 @@
 :root {
-    --penguin-size: 500px;
+    --penguin-size: 300px;
     --penguin-skin: gray;
     --penguin-belly: white;
     --penguin-beak: orange;
@@ -13,9 +13,8 @@
 
   .penguin {
     position: relative;
-    margin: auto;
+    margin: 1% 70% 0 0;
     display: block;
-    margin-top: 5%;
     width: var(--penguin-size, 300px);
     height: var(--penguin-size, 300px);
     
@@ -135,7 +134,12 @@
     border-radius: 50% 50% 50% 50%;
     transform: rotate(-80deg);
     z-index: -2222;
+    animation-duration: 5s;
+    animation-name: tap;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
+
 
   .left-feet {
     top: 85%;
@@ -146,8 +150,16 @@
     border-radius: 50% 50% 50% 50%;
     transform: rotate(80deg);
     z-index: -2222;
+    animation-duration: 5s;
+    animation-name: tap;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
-
+  @keyframes tap {
+    100% {
+      transform: rotateX(1deg);
+    }
+  }
   .right-eye {
     top: 45%;
     left: 60%;
@@ -213,13 +225,33 @@
 
   body {
     background:#cae7e2;
+    
   }
 
   .penguin * {
     position: absolute;
+    transition: transform 5s ease-in-out;
   }
-  .road {
+  .penguin  {
+    animation: left-to-right 5s ease-out forwards infinite alternate;
+  }
+  @keyframes left-to-right {
+    0%{
+      transform: translateX(0); 
+    }
+    33%{
+      transform: translateY(100%); 
+    }
+    66%{
+      transform: translateX(100%) translateY(100%);
+    }
+    100%{
+      transform: translateX(100%);
+    }
+
+  }
+  /* .road {
     position: relative;
-    top: 450px;
+    top: 280px;
     border-bottom: 8px dashed rgb(3, 3, 100);
-  }
+  } */
